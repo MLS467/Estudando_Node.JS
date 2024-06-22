@@ -1,0 +1,38 @@
+<main class="container">
+    <form action="/cadastrar" method="post" id="divForm">
+        <div id="img" class="mb-3">
+            <img src="/img/icon.png" alt="user">
+        </div>
+        <input class="form-control mt-2" type="text" name="nome" placeholder="Digite seu nome"
+            aria-label="default input example">
+
+        <input class="form-control mt-2" type="number" name="idade" placeholder="Digite sua idade"
+            aria-label="default input example">
+
+        <button type="submit" value="cadastro" class="btn btn-primary w-25 mt-5">Enviar</button>
+    </form>
+
+    <div class="w-100 mt-5">
+        <table class="table  table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>visualizar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each vet}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{nome}}</td>
+                    <td>{{idade}}</td>
+                    <td><a href="selecionar/{{id}}" target="_blank" rel="noopener noreferrer">Visualizar</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+    </div>
+</main>

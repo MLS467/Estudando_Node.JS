@@ -27,7 +27,7 @@ app.post('/teste', (req, res) => {
         idade: req.body.idade,
         peso: req.body.peso
     }
-    console.log(dados);
+    console.table(dados);
     res.redirect('/mostraDados');
 });
 

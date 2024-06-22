@@ -1,0 +1,3 @@
+npm i json-server -- save
+  ou
+npm i -g json-server 

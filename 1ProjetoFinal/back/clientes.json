@@ -1,0 +1,29 @@
+{
+  "clientes": [
+    {
+      "nome": "Ralf",
+      "idade": 30,
+      "id": "1"
+    },
+    {
+      "nome": "Mayra",
+      "idade": "32",
+      "id": "2"
+    },
+    {
+      "nome": "Marcelo",
+      "idade": "35",
+      "id": "3"
+    },
+    {
+      "id": "69f3",
+      "nome": "Maisson Leal da Silva",
+      "idade": "29"
+    },
+    {
+      "id": "2d4c",
+      "nome": "Luciane Rodrigues",
+      "idade": "31"
+    }
+  ]
+}

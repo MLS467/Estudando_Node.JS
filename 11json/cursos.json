@@ -1,0 +1,24 @@
+{
+  "cursos": [
+    {
+      "nome": "JavaScript",
+      "valor": 900,
+      "id": "1"
+    },
+    {
+      "nome": "NodeJS",
+      "valor": 900,
+      "id": "2"
+    },
+    {
+      "nome": "PHP",
+      "valor": 1000,
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "curso": "React",
+      "valor": "1200"
+    }
+  ]
+}
