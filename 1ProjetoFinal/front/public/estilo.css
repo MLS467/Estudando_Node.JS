@@ -47,6 +47,28 @@ main {
     height: 200px;
 }
 
+#divBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+#visualizar {
+    text-align: center;
+    padding-left: 15%;
+}
+
+td a {
+    width: 50%;
+    margin-left: 50%;
+}
+
+#divBtn a,
+button {
+    width: 25%;
+}
 
 
 thead,

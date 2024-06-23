@@ -36,7 +36,43 @@ app.post('/cadastrar', (req, res) => {
             headers: { 'Content-Type': 'application/json' }
         })
         .then(res.redirect('/'))
+})
 
+app.get('/selecionar/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    fetch(`http://localhost:3000/clientes/${id}`, { method: 'GET' })
+        .then(resultado => resultado.json())
+        .then(resultado => {
+            const dados = {
+                id: resultado.id,
+                nome: resultado.nome,
+                idade: resultado.idade
+            }
+            res.render('selecionar', { valores: dados });
+        })
+})
+
+app.post('/editar/:id', (req, res) => {
+    const id = req.params.id;
+    const dados = {
+        nome: req.body.nome,
+        idade: req.body.idade
+    }
+
+    fetch(`http://localhost:3000/clientes/${id}`,
+        {
+            method: 'PUT',
+            body: JSON.stringify(dados),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(res.redirect('/'));
+})
+
+app.get('/deletar/:id', (req, res) => {
+    const id = req.params.id;
+    fetch(`http://localhost:3000/clientes/${id}`, { method: 'DELETE' })
+        .then(res.redirect('/'));
 })
 
 

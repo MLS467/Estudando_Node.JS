@@ -1,0 +1,26 @@
+<main class="container">
+    <form action="/editar/{{valores.id}}" method="post" id="divForm">
+        <div id="img" class="mb-3">
+            <img src="/img/icon.png" alt="user">
+        </div>
+        <input class="form-control mt-2" type="text" name="nome" value="{{valores.id}}"
+            aria-label="default input example" disabled>
+
+        <input class="form-control mt-2" type="text" name="nome" value="{{valores.nome}}"
+            aria-label="default input example">
+
+        <input class="form-control mt-2" type="number" name="idade" value="{{valores.idade}}"
+            aria-label="default input example">
+        <div id="divBtn">
+            <a href="/" class="btn btn-secondary  mt-5">Cancelar</a>
+            <button type="submit" value="editar" class="btn btn-warning  mt-5">Editar</button>
+            <a href="/deletar/{{valores.id}}" class="btn btn-danger  mt-5">Deletar</a>
+            {{!-- <button type="submit" value="cadastro" class="btn btn-primary  mt-5">Enviar</button> --}}
+        </div>
+    </form>
+    {{#if ok}}
+    <p>Dado editado com sucesso!</p>
+    {{else}}
+    <p></p>
+    {{/if}}
+</main>
